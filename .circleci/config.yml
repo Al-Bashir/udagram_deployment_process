@@ -31,7 +31,7 @@ jobs:
       - save-cache: 
         paths: 
           - node_modules
-          key: - v1-dependencies-{{ checksum "package.json "}}
+        key: - v1-dependencies-{{ checksum "package.json "}}
       - run:
           name: Back-End Build
           command: |
