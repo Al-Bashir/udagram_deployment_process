@@ -42,10 +42,6 @@ jobs:
           command: |
             yarn frontend:build
       - run:
-          name: Front-End Unit test
+          name: Front-End Deploy
           command: |
-            yarn frontend:unittest
-      - run:
-          name: Front-End E2E test
-          command: |
-            yarn frontend:e2etest
+            yarn frontend:deploy
