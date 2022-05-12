@@ -12,7 +12,7 @@ jobs:
       - image: "cimg/base:stable"
     steps:
       - node/install:
-         node-version: "16.13.2" 
+          node-version: "16.13.2" 
       - node/install-yarn
       - checkout
       - aws-cli/setup
@@ -31,7 +31,7 @@ jobs:
             yarn frontend:install
       - save_cache: 
           paths: 
-           - node_modules
+            - node_modules
           key: v1-dependencies-{{ checksum "package.json"}}
       - run:
           name: Back-End Build
@@ -41,3 +41,11 @@ jobs:
           name: Front-End Build
           command: |
             yarn frontend:build
+      - run:
+          name: Front-End Unit test
+          command: |
+            yarn frontend:unittest
+      - run:
+          name: Front-End E2E test
+          command: |
+            yarn frontend:e2etest
