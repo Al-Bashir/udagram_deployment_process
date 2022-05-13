@@ -1,5 +1,3 @@
-echo "***backend***"
-
 #eb create
 eb create udagram-api
 
