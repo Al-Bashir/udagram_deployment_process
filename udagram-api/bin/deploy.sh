@@ -1,13 +1,13 @@
 #eb create
-eb create udagram-api-dev
+eb create udagram-api
 
 #eb  use
 
-eb use udagram-api-dev
+eb use udagram-api
 
 #eb  deploy
 
-eb deploy udagram-api-dev
+eb deploy udagram-api
 
 #set environment variables
 
